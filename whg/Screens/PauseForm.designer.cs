@@ -34,36 +34,46 @@
             // 
             // continueButton
             // 
+            this.continueButton.FlatAppearance.BorderSize = 0;
             this.continueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.continueButton.Location = new System.Drawing.Point(152, 91);
+            this.continueButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.continueButton.ForeColor = System.Drawing.Color.Red;
+            this.continueButton.Location = new System.Drawing.Point(201, 56);
+            this.continueButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.continueButton.Name = "continueButton";
-            this.continueButton.Size = new System.Drawing.Size(100, 50);
+            this.continueButton.Size = new System.Drawing.Size(102, 32);
             this.continueButton.TabIndex = 0;
-            this.continueButton.Text = "Continue";
+            this.continueButton.Text = "Resume Game";
             this.continueButton.UseVisualStyleBackColor = true;
             this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
             this.continueButton.Enter += new System.EventHandler(this.button_Enter);
             // 
             // exitButton
             // 
+            this.exitButton.FlatAppearance.BorderSize = 0;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(152, 189);
+            this.exitButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(201, 135);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(100, 49);
+            this.exitButton.Size = new System.Drawing.Size(102, 32);
             this.exitButton.TabIndex = 1;
-            this.exitButton.Text = "Exit";
+            this.exitButton.Text = "Main Menu";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             this.exitButton.Enter += new System.EventHandler(this.button_Enter);
             // 
             // PauseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.continueButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PauseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PauseForm";

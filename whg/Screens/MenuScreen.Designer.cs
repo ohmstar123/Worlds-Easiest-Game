@@ -36,6 +36,8 @@
             this.toptitleLabel = new System.Windows.Forms.Label();
             this.middletitleLabel = new System.Windows.Forms.Label();
             this.bottemtitleLabel = new System.Windows.Forms.Label();
+            this.failLabel = new System.Windows.Forms.Label();
+            this.loadingtextLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitButton
@@ -137,11 +139,38 @@
             this.bottemtitleLabel.TabIndex = 17;
             this.bottemtitleLabel.Text = "v1.0";
             // 
+            // failLabel
+            // 
+            this.failLabel.AutoSize = true;
+            this.failLabel.BackColor = System.Drawing.Color.Black;
+            this.failLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.failLabel.ForeColor = System.Drawing.Color.White;
+            this.failLabel.Location = new System.Drawing.Point(595, 11);
+            this.failLabel.Name = "failLabel";
+            this.failLabel.Size = new System.Drawing.Size(119, 30);
+            this.failLabel.TabIndex = 18;
+            this.failLabel.Text = "FAILS: 0";
+            this.failLabel.Visible = false;
+            // 
+            // loadingtextLabel
+            // 
+            this.loadingtextLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadingtextLabel.ForeColor = System.Drawing.Color.Black;
+            this.loadingtextLabel.Location = new System.Drawing.Point(156, 192);
+            this.loadingtextLabel.Name = "loadingtextLabel";
+            this.loadingtextLabel.Size = new System.Drawing.Size(405, 135);
+            this.loadingtextLabel.TabIndex = 19;
+            this.loadingtextLabel.Text = "THIS WILL BE THE EASIEST TASK OF YOUR LIFE";
+            this.loadingtextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.loadingtextLabel.Visible = false;
+            // 
             // MenuScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
+            this.Controls.Add(this.loadingtextLabel);
+            this.Controls.Add(this.failLabel);
             this.Controls.Add(this.bottemtitleLabel);
             this.Controls.Add(this.middletitleLabel);
             this.Controls.Add(this.toptitleLabel);
@@ -167,5 +196,7 @@
         private System.Windows.Forms.Label toptitleLabel;
         private System.Windows.Forms.Label middletitleLabel;
         private System.Windows.Forms.Label bottemtitleLabel;
+        private System.Windows.Forms.Label failLabel;
+        private System.Windows.Forms.Label loadingtextLabel;
     }
 }

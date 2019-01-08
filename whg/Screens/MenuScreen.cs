@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameSystemServices;
+using System.Threading;
 
 namespace whg
 {
@@ -20,6 +21,19 @@ namespace whg
 
         private void playButton_Click(object sender, EventArgs e)
         {
+            playButton.Visible = false;
+            exitButton.Visible = false;
+            toptitleLabel.Visible = false;
+            middletitleLabel.Visible = false;
+            bottemtitleLabel.Visible = false;
+
+            failLabel.Visible = true;
+            loadingtextLabel.Visible = true;
+            MadebyLabel.Text = "Level: 1";
+
+            Refresh();
+            Thread.Sleep(3000);
+
             MainForm.ChangeScreen(this, "GameScreen");
         }
 

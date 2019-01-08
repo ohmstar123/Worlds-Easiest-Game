@@ -69,7 +69,7 @@ namespace whg
 
             //change the current button to the active colour
             Button btn = (Button)sender;
-            btn.BackColor = Color.Gold;
+            btn.BackColor = Color.Black;
         }
     }
 }
