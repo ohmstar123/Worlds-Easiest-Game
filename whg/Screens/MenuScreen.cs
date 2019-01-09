@@ -55,6 +55,5 @@ namespace whg
             Button btn = (Button)sender;
             btn.BackColor = Color.Black;
         }
-
     }
 }

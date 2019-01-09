@@ -21,7 +21,14 @@ namespace whg
 
         //TODO create your global game variables here
         int heroX, heroY, heroSize, heroSpeed;
-        SolidBrush heroBrush = new SolidBrush(Color.Black);
+        SolidBrush heroBrush = new SolidBrush(Color.Red);
+        SolidBrush gamestartBrush = new SolidBrush(Color.Goldenrod);
+
+        List<int> monXList = new List<int>();
+        List<int> monYList = new List<int>();
+        List<int> monSizeList = new List<int>();
+        List<int> monSpeedList = new List<int>();
+        List<int> monHPList = new List<int>();
 
         public GameScreen()
         {
@@ -149,8 +156,12 @@ namespace whg
         //Everything that is to be drawn on the screen should be done here
         private void GameScreen_Paint(object sender, PaintEventArgs e)
         {
+            //game outlay
+            e.Graphics.FillRectangle(gamestartBrush, 50, 100, 100, 280);
+
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
+            
         }
     }
 
