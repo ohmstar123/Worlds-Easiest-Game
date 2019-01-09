@@ -23,6 +23,7 @@ namespace whg
         int heroX, heroY, heroSize, heroSpeed;
         SolidBrush heroBrush = new SolidBrush(Color.Red);
         SolidBrush gamestartBrush = new SolidBrush(Color.Goldenrod);
+        SolidBrush gamemiddleBrush = new SolidBrush(Color.MistyRose);
 
         List<int> monXList = new List<int>();
         List<int> monYList = new List<int>();
@@ -158,6 +159,7 @@ namespace whg
         {
             //game outlay
             e.Graphics.FillRectangle(gamestartBrush, 50, 100, 100, 280);
+            e.Graphics.FillRectangle(gamemiddleBrush, 100, 350, 120, 1000);
 
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
