@@ -25,6 +25,9 @@ namespace whg
         SolidBrush gamestartBrush = new SolidBrush(Color.Goldenrod);
         SolidBrush gamemiddleBrush = new SolidBrush(Color.MistyRose);
         SolidBrush gamefinishBrush = new SolidBrush(Color.LimeGreen);
+        SolidBrush boundaryBrush = new SolidBrush(Color.LightBlue);
+        SolidBrush testBrush = new SolidBrush(Color.Purple);
+        SolidBrush extraBrush = new SolidBrush(Color.Yellow);
 
         List<int> monXList = new List<int>();
         List<int> monYList = new List<int>();
@@ -162,8 +165,16 @@ namespace whg
             e.Graphics.FillRectangle(gamestartBrush, 50, 100, 100, 280);
             e.Graphics.FillRectangle(gamemiddleBrush, 150, 350, 60, 30);
             e.Graphics.FillRectangle(gamemiddleBrush, 210, 100, 250, 280);
-            e.Graphics.FillRectangle(gamefinishBrush, 470, 100, 60, 30);
-            // e.Graphics.FillRectangle(gamefinishBrush, 380, 100, 100, 280);
+            e.Graphics.FillRectangle(gamemiddleBrush, 460, 100, 60, 30);
+            e.Graphics.FillRectangle(gamefinishBrush, 520, 100, 100, 280);
+
+            //invisible rectangles on outside(remember to turn them into lists later)
+            e.Graphics.FillRectangle(boundaryBrush, 0, 0, 712, 100); //1
+            e.Graphics.FillRectangle(boundaryBrush, 0, 380, 712, 67); //6
+            e.Graphics.FillRectangle(boundaryBrush, 0, 100, 50, 280); //4
+            e.Graphics.FillRectangle(boundaryBrush, 620, 100, 92, 280); //5
+            e.Graphics.FillRectangle(boundaryBrush, 150, 100, 60, 250); //2
+            e.Graphics.FillRectangle(boundaryBrush, 460, 130, 60, 250); //3
 
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
