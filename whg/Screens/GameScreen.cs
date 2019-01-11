@@ -26,14 +26,18 @@ namespace whg
         SolidBrush gamemiddleBrush = new SolidBrush(Color.MistyRose);
         SolidBrush gamefinishBrush = new SolidBrush(Color.LimeGreen);
         SolidBrush boundaryBrush = new SolidBrush(Color.LightBlue);
-        SolidBrush testBrush = new SolidBrush(Color.Purple);
-        SolidBrush extraBrush = new SolidBrush(Color.Yellow);
+        SolidBrush testBrush = new SolidBrush(Color.Purple); //DELETE AFTER
+        SolidBrush extraBrush = new SolidBrush(Color.Yellow); //DELETE AFTER
 
         List<int> monXList = new List<int>();
         List<int> monYList = new List<int>();
         List<int> monSizeList = new List<int>();
         List<int> monSpeedList = new List<int>();
-        List<int> monHPList = new List<int>();
+
+        List<int> boundaryXList = new List<int>();
+        List<int> boundaryYList = new List<int>();
+        List<int> boundaryWList = new List<int>();
+        List<int> boundaryHList = new List<int>();
 
         public GameScreen()
         {
@@ -45,10 +49,15 @@ namespace whg
         {
             //TODO - setup all your initial game values here. Use this method
             // each time you restart your game to reset all values.
-            heroX = 100;
-            heroY = 100;
+            heroX = 90;
+            heroY = 240;
             heroSize = 20;
             heroSpeed = 5;
+          
+            boundaryXList[0] = 0;
+            boundaryYList[0] = 0;
+            boundaryWList[0] = 712;
+            boundaryHList[0] = 100;
         }
 
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -151,7 +160,7 @@ namespace whg
 
 
             //TODO collisions checks 
-
+            
 
             //calls the GameScreen_Paint method to draw the screen.
             Refresh();
@@ -175,6 +184,11 @@ namespace whg
             e.Graphics.FillRectangle(boundaryBrush, 620, 100, 92, 280); //5
             e.Graphics.FillRectangle(boundaryBrush, 150, 100, 60, 250); //2
             e.Graphics.FillRectangle(boundaryBrush, 460, 130, 60, 250); //3
+
+            for (int i = 0; i < boundaryHList.Count; i++)
+            {
+                e.Graphics.FillRectangle(testBrush, boundaryXList[i], boundaryYList[i], boundaryWList[i], boundaryHList[i]);
+            }
 
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
