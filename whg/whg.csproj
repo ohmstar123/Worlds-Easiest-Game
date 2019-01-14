@@ -58,11 +58,11 @@
     <Compile Include="Screens\PauseForm.designer.cs">
       <DependentUpon>PauseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\ScoreScreen.cs">
+    <Compile Include="Screens\FinishScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Screens\ScoreScreen.Designer.cs">
-      <DependentUpon>ScoreScreen.cs</DependentUpon>
+    <Compile Include="Screens\FinishScreen.Designer.cs">
+      <DependentUpon>FinishScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\MenuScreen.cs">
       <SubType>UserControl</SubType>
@@ -106,8 +106,8 @@
     <EmbeddedResource Include="Screens\MenuScreen.resx">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\ScoreScreen.resx">
-      <DependentUpon>ScoreScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\FinishScreen.resx">
+      <DependentUpon>FinishScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

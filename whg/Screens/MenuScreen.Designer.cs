@@ -180,7 +180,7 @@
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
             this.Name = "MenuScreen";
-            this.Size = new System.Drawing.Size(714, 499);
+            this.Size = new System.Drawing.Size(712, 499);
             this.ResumeLayout(false);
             this.PerformLayout();
 

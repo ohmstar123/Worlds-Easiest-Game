@@ -38,8 +38,8 @@
             this.continueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.continueButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.continueButton.ForeColor = System.Drawing.Color.Red;
-            this.continueButton.Location = new System.Drawing.Point(201, 56);
-            this.continueButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.continueButton.Location = new System.Drawing.Point(11, 27);
+            this.continueButton.Margin = new System.Windows.Forms.Padding(2);
             this.continueButton.Name = "continueButton";
             this.continueButton.Size = new System.Drawing.Size(102, 32);
             this.continueButton.TabIndex = 0;
@@ -54,8 +54,8 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
-            this.exitButton.Location = new System.Drawing.Point(201, 135);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitButton.Location = new System.Drawing.Point(11, 118);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(102, 32);
             this.exitButton.TabIndex = 1;
@@ -69,11 +69,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(129, 200);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.continueButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PauseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PauseForm";

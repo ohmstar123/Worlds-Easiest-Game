@@ -22,12 +22,11 @@ namespace whg
         //TODO create your global game variables here
         int heroX, heroY, heroSize, heroSpeed;
         SolidBrush heroBrush = new SolidBrush(Color.Red);
+        SolidBrush monBrush = new SolidBrush(Color.DodgerBlue);
         SolidBrush gamestartBrush = new SolidBrush(Color.Goldenrod);
         SolidBrush gamemiddleBrush = new SolidBrush(Color.MistyRose);
         SolidBrush gamefinishBrush = new SolidBrush(Color.LimeGreen);
         SolidBrush boundaryBrush = new SolidBrush(Color.LightBlue);
-        SolidBrush testBrush = new SolidBrush(Color.Purple); //DELETE AFTER
-        SolidBrush extraBrush = new SolidBrush(Color.Yellow); //DELETE AFTER
 
         List<int> monXList = new List<int>();
         List<int> monYList = new List<int>();
@@ -54,10 +53,35 @@ namespace whg
             heroSize = 20;
             heroSpeed = 5;
           
-            boundaryXList[0] = 0;
-            boundaryYList[0] = 0;
-            boundaryWList[0] = 712;
-            boundaryHList[0] = 100;
+            boundaryXList.Add(0);
+            boundaryYList.Add(0);
+            boundaryWList.Add(712);
+            boundaryHList.Add(100);
+
+            boundaryXList.Add(0);
+            boundaryYList.Add(380);
+            boundaryWList.Add(712);
+            boundaryHList.Add(67);
+
+            boundaryXList.Add(0);
+            boundaryYList.Add(100);
+            boundaryWList.Add(50);
+            boundaryHList.Add(280);
+
+            boundaryXList.Add(620);
+            boundaryYList.Add(100);
+            boundaryWList.Add(92);
+            boundaryHList.Add(280);
+
+            boundaryXList.Add(150);
+            boundaryYList.Add(100);
+            boundaryWList.Add(60);
+            boundaryHList.Add(250);
+
+            boundaryXList.Add(460);
+            boundaryYList.Add(130);
+            boundaryWList.Add(60);
+            boundaryHList.Add(250);
         }
 
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -138,6 +162,9 @@ namespace whg
         /// </summary>
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            int temptX = heroX;
+            int temptY = heroY;
+
             //TODO move main character 
             if (leftArrowDown == true)
             {
@@ -160,6 +187,26 @@ namespace whg
 
 
             //TODO collisions checks 
+            Rectangle heroRec = new Rectangle(heroX, heroY, heroSize, heroSize);
+
+            for (int i = 0; i < boundaryXList.Count; i++)
+            {
+                Rectangle BoundaryRec = new Rectangle(boundaryXList[i], boundaryYList[i], boundaryWList[i], boundaryHList[i]);
+
+                if (heroRec.IntersectsWith(BoundaryRec))
+                {
+                    heroX = temptX;
+                    heroY = temptY;
+                }
+            }
+
+            
+                Rectangle FinishRec = new Rectangle(520, 100, 100, 280);
+
+                if (heroRec.IntersectsWith(FinishRec))
+                {
+                    MainForm.ChangeScreen(this, "FinishScreen");
+                }
             
 
             //calls the GameScreen_Paint method to draw the screen.
@@ -177,22 +224,19 @@ namespace whg
             e.Graphics.FillRectangle(gamemiddleBrush, 460, 100, 60, 30);
             e.Graphics.FillRectangle(gamefinishBrush, 520, 100, 100, 280);
 
-            //invisible rectangles on outside(remember to turn them into lists later)
-            e.Graphics.FillRectangle(boundaryBrush, 0, 0, 712, 100); //1
-            e.Graphics.FillRectangle(boundaryBrush, 0, 380, 712, 67); //6
-            e.Graphics.FillRectangle(boundaryBrush, 0, 100, 50, 280); //4
-            e.Graphics.FillRectangle(boundaryBrush, 620, 100, 92, 280); //5
-            e.Graphics.FillRectangle(boundaryBrush, 150, 100, 60, 250); //2
-            e.Graphics.FillRectangle(boundaryBrush, 460, 130, 60, 250); //3
-
             for (int i = 0; i < boundaryHList.Count; i++)
             {
-                e.Graphics.FillRectangle(testBrush, boundaryXList[i], boundaryYList[i], boundaryWList[i], boundaryHList[i]);
+                e.Graphics.FillRectangle(boundaryBrush, boundaryXList[i], boundaryYList[i], boundaryWList[i], boundaryHList[i]);
             }
 
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
             
+            for (int i = 0; i < boundaryHList.Count; i++)
+            {
+                e.Graphics.FillEllipse(monXList[i], monYList[i], monSizeList[i], monSizeList[i]);
+            }
+
         }
     }
 
