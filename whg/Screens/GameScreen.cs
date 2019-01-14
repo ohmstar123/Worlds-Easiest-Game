@@ -82,6 +82,11 @@ namespace whg
             boundaryYList.Add(130);
             boundaryWList.Add(60);
             boundaryHList.Add(250);
+
+            monXList.Add(205);
+            monYList.Add(300);
+            monSizeList.Add(25);
+            monSpeedList.Add(3);
         }
 
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -232,9 +237,9 @@ namespace whg
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
             
-            for (int i = 0; i < boundaryHList.Count; i++)
+            for (int i = 0; i < monXList.Count; i++)
             {
-                e.Graphics.FillEllipse(monXList[i], monYList[i], monSizeList[i], monSizeList[i]);
+                e.Graphics.FillEllipse(monBrush, monXList[i], monYList[i], monSizeList[i], monSizeList[i]);
             }
 
         }
