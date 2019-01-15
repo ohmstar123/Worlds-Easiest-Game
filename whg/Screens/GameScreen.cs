@@ -32,6 +32,7 @@ namespace whg
         List<int> monYList = new List<int>();
         List<int> monSizeList = new List<int>();
         List<int> monSpeedList = new List<int>();
+        List<int> monLorRList = new List<int>();
 
         List<int> boundaryXList = new List<int>();
         List<int> boundaryYList = new List<int>();
@@ -51,7 +52,7 @@ namespace whg
             heroX = 90;
             heroY = 240;
             heroSize = 20;
-            heroSpeed = 5;
+            heroSpeed = 4;
           
             boundaryXList.Add(0);
             boundaryYList.Add(0);
@@ -83,10 +84,47 @@ namespace whg
             boundaryWList.Add(60);
             boundaryHList.Add(250);
 
-            monXList.Add(205);
-            monYList.Add(300);
+            monXList.Add(435);//
+            monYList.Add(345);
             monSizeList.Add(25);
-            monSpeedList.Add(3);
+            monSpeedList.Add(4);
+            monLorRList.Add(1);
+
+            monXList.Add(210);
+            monYList.Add(305);
+            monSizeList.Add(25);
+            monSpeedList.Add(4);
+            monLorRList.Add(0);
+
+            monXList.Add(435);//
+            monYList.Add(265);
+            monSizeList.Add(25);
+            monSpeedList.Add(4);
+            monLorRList.Add(1);
+
+            monXList.Add(210);
+            monYList.Add(225);
+            monSizeList.Add(25);
+            monSpeedList.Add(4);
+            monLorRList.Add(0);
+
+            monXList.Add(435);//
+            monYList.Add(185);
+            monSizeList.Add(25);
+            monSpeedList.Add(4);
+            monLorRList.Add(1);
+
+            monXList.Add(210);
+            monYList.Add(145);
+            monSizeList.Add(25);
+            monSpeedList.Add(4);
+            monLorRList.Add(0);
+
+            monXList.Add(435);//
+            monYList.Add(105);
+            monSizeList.Add(25);
+            monSpeedList.Add(4);
+            monLorRList.Add(1);
         }
 
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -189,7 +227,17 @@ namespace whg
             }
 
             //TODO move npc characters
-
+            for (int i = 0; i < monXList.Count; i++)
+            {
+                if (monXList[i] < 435)
+                {
+                    monXList[i] = monXList[i] + monSpeedList[i];
+                }
+                else if (monXList[i] >= 435)
+                {
+                    monXList[i] = monXList[i] - monSpeedList[i];
+                }
+            }
 
             //TODO collisions checks 
             Rectangle heroRec = new Rectangle(heroX, heroY, heroSize, heroSize);
@@ -205,14 +253,15 @@ namespace whg
                 }
             }
 
-            
-                Rectangle FinishRec = new Rectangle(520, 100, 100, 280);
 
-                if (heroRec.IntersectsWith(FinishRec))
-                {
-                    MainForm.ChangeScreen(this, "FinishScreen");
-                }
-            
+            Rectangle FinishRec = new Rectangle(520, 100, 100, 280);
+
+            if (heroRec.IntersectsWith(FinishRec))
+            {
+                gameTimer.Enabled = false;
+                MainForm.ChangeScreen(this, "ScoreScreen");
+            }
+
 
             //calls the GameScreen_Paint method to draw the screen.
             Refresh();
