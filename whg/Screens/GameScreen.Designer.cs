@@ -66,7 +66,7 @@
             this.failLabel.BackColor = System.Drawing.Color.Black;
             this.failLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.failLabel.ForeColor = System.Drawing.Color.White;
-            this.failLabel.Location = new System.Drawing.Point(593, 11);
+            this.failLabel.Location = new System.Drawing.Point(579, 11);
             this.failLabel.Name = "failLabel";
             this.failLabel.Size = new System.Drawing.Size(119, 30);
             this.failLabel.TabIndex = 19;

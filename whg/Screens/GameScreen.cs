@@ -21,6 +21,7 @@ namespace whg
 
         //TODO create your global game variables here
         int heroX, heroY, heroSize, heroSpeed;
+        int deathcounter = 0;
         SolidBrush heroBrush = new SolidBrush(Color.Red);
         SolidBrush monBrush = new SolidBrush(Color.DodgerBlue);
         SolidBrush gamestartBrush = new SolidBrush(Color.Goldenrod);
@@ -51,8 +52,8 @@ namespace whg
             // each time you restart your game to reset all values.
             heroX = 90;
             heroY = 240;
-            heroSize = 20;
-            heroSpeed = 4;
+            heroSize = 24;
+            heroSpeed = 3;
           
             boundaryXList.Add(0);
             boundaryYList.Add(0);
@@ -87,43 +88,43 @@ namespace whg
             monXList.Add(435);//
             monYList.Add(345);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(1);
 
             monXList.Add(210);
             monYList.Add(305);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(0);
 
             monXList.Add(435);//
             monYList.Add(265);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(1);
 
             monXList.Add(210);
             monYList.Add(225);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(0);
 
             monXList.Add(435);//
             monYList.Add(185);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(1);
 
             monXList.Add(210);
             monYList.Add(145);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(0);
 
             monXList.Add(435);//
             monYList.Add(105);
             monSizeList.Add(25);
-            monSpeedList.Add(4);
+            monSpeedList.Add(6);
             monLorRList.Add(1);
         }
 
@@ -242,12 +243,12 @@ namespace whg
 
             for (int i = 0; i < monXList.Count; i++)
             {
-                if (monXList[i] == 435 & monLorRList[i] == 0)
+                if (monXList[i] >= 435 & monLorRList[i] == 0)
                 {
                     monLorRList[i] = 1;
                     monXList[i] = monXList[i] + monSpeedList[i];
                 }
-                else if (monXList[i] == 210 & monLorRList[i] == 1)
+                else if (monXList[i] <= 210 & monLorRList[i] == 1)
                 {
                     monLorRList[i] = 0;
                     monXList[i] = monXList[i] - monSpeedList[i];
@@ -268,6 +269,19 @@ namespace whg
                 }
             }
 
+            for (int i = 0; i < monXList.Count; i++)
+            {
+                Rectangle monRec = new Rectangle(monXList[i], monYList[i], monSizeList[i], monSizeList[i]);
+
+                if (heroRec.IntersectsWith(monRec))
+                {
+                    heroX = 90;
+                    heroY = 240;
+
+                    deathcounter++;
+                    failLabel.Text = "FAILS: " + deathcounter;
+                }
+            }
 
             Rectangle FinishRec = new Rectangle(520, 100, 100, 280);
 

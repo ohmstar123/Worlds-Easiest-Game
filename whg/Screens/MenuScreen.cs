@@ -31,8 +31,8 @@ namespace whg
             loadingtextLabel.Visible = true;
             MadebyLabel.Text = "Level: 1";
 
-            //Refresh();
-            //Thread.Sleep(3000);
+            Refresh();
+            Thread.Sleep(3000);
 
             MainForm.ChangeScreen(this, "GameScreen");
         }
