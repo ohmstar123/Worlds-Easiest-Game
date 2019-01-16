@@ -227,14 +227,29 @@ namespace whg
             }
 
             //TODO move npc characters
+
             for (int i = 0; i < monXList.Count; i++)
             {
-                if (monXList[i] < 435)
+                if (monLorRList[i] == 0)
                 {
                     monXList[i] = monXList[i] + monSpeedList[i];
                 }
-                else if (monXList[i] >= 435)
+                else if (monLorRList[i] == 1)
                 {
+                    monXList[i] = monXList[i] - monSpeedList[i];
+                }
+            }
+
+            for (int i = 0; i < monXList.Count; i++)
+            {
+                if (monXList[i] == 435 & monLorRList[i] == 0)
+                {
+                    monLorRList[i] = 1;
+                    monXList[i] = monXList[i] + monSpeedList[i];
+                }
+                else if (monXList[i] == 210 & monLorRList[i] == 1)
+                {
+                    monLorRList[i] = 0;
                     monXList[i] = monXList[i] - monSpeedList[i];
                 }
             }
