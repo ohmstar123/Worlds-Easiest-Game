@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameSystemServices;
+using System.IO;
 
 namespace whg
 {
     public partial class GameScreen : UserControl
     {
+        System.Windows.Media.MediaPlayer gamesoundPlayer;
+
         //player1 button control keys - DO NOT CHANGE
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, bDown, nDown, mDown, spaceDown;
-
-        //player2 button control keys - DO NOT CHANGE
-        Boolean aDown, sDown, dDown, wDown, cDown, vDown, xDown, zDown;
 
         //TODO create your global game variables here
         int heroX, heroY, heroSize, heroSpeed;
@@ -44,10 +44,15 @@ namespace whg
         {
             InitializeComponent();
             InitializeGameValues();
+
+            gamesoundPlayer = new System.Windows.Media.MediaPlayer();
+            gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/Game Background Music.wav"));
         }
 
         public void InitializeGameValues()
         {
+            gamesoundPlayer.Play();
+
             //TODO - setup all your initial game values here. Use this method
             // each time you restart your game to reset all values.
             heroX = 90;
@@ -288,6 +293,7 @@ namespace whg
             if (heroRec.IntersectsWith(FinishRec))
             {
                 gameTimer.Enabled = false;
+                gamesoundPlayer.Stop();
                 MainForm.ChangeScreen(this, "ScoreScreen");
             }
 
@@ -306,11 +312,6 @@ namespace whg
             e.Graphics.FillRectangle(gamemiddleBrush, 210, 100, 250, 280);
             e.Graphics.FillRectangle(gamemiddleBrush, 460, 100, 60, 30);
             e.Graphics.FillRectangle(gamefinishBrush, 520, 100, 100, 280);
-
-            for (int i = 0; i < boundaryHList.Count; i++)
-            {
-                e.Graphics.FillRectangle(boundaryBrush, boundaryXList[i], boundaryYList[i], boundaryWList[i], boundaryHList[i]);
-            }
 
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
