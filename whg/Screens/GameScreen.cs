@@ -44,13 +44,12 @@ namespace whg
         {
             InitializeComponent();
             InitializeGameValues();
-
-            gamesoundPlayer = new System.Windows.Media.MediaPlayer();
-            gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/Game Background Music.wav"));
         }
 
         public void InitializeGameValues()
         {
+            gamesoundPlayer = new System.Windows.Media.MediaPlayer();
+            gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/gameback.mp3"));
             gamesoundPlayer.Play();
 
             //TODO - setup all your initial game values here. Use this method

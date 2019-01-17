@@ -151,7 +151,9 @@
     <None Include="Resources\yellow_50x50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Game Background Music.wav" />
+    <None Include="Resources\gameback.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

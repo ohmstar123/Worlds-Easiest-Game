@@ -71,11 +71,12 @@ namespace whg.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Game_Background_Music {
+        internal static byte[] gameback {
             get {
-                return ResourceManager.GetStream("Game_Background_Music", resourceCulture);
+                object obj = ResourceManager.GetObject("gameback", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
