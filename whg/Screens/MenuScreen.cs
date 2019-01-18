@@ -20,6 +20,7 @@ namespace whg
         public MenuScreen()
         {
             InitializeComponent();
+
             gamesoundPlayer = new System.Windows.Media.MediaPlayer();
             gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/menuback.mp3"));
             gamesoundPlayer.Play();

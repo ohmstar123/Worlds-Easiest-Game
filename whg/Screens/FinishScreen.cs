@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace whg
 {
     public partial class ScoreScreen : UserControl
     {
+        System.Windows.Media.MediaPlayer gamesoundPlayer;
+
         public ScoreScreen()
         {
             InitializeComponent();
+
+            gamesoundPlayer = new System.Windows.Media.MediaPlayer();
+            gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/Fireworks.mp3"));
+            gamesoundPlayer.Play();
         }
 
         private void ScoreScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -42,6 +49,7 @@ namespace whg
 
         private void menuButton_Click(object sender, EventArgs e)
         {
+            gamesoundPlayer.Stop();
             MainForm.ChangeScreen(this, "MenuScreen");
         }
     }

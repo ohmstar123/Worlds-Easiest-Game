@@ -73,6 +73,16 @@ namespace whg.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Fireworks {
+            get {
+                object obj = ResourceManager.GetObject("Fireworks", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] gameback {
             get {
                 object obj = ResourceManager.GetObject("gameback", resourceCulture);
@@ -103,9 +113,9 @@ namespace whg.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] menuback {
+        internal static byte[] menu_background_sound {
             get {
-                object obj = ResourceManager.GetObject("menuback", resourceCulture);
+                object obj = ResourceManager.GetObject("menu_background_sound", resourceCulture);
                 return ((byte[])(obj));
             }
         }
