@@ -9,18 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameSystemServices;
 using System.Threading;
+using System.IO;
 
 namespace whg
 {
     public partial class MenuScreen : UserControl
     {
+        System.Windows.Media.MediaPlayer gamesoundPlayer;
+
         public MenuScreen()
         {
             InitializeComponent();
+            gamesoundPlayer = new System.Windows.Media.MediaPlayer();
+            gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/menuback.mp3"));
+            gamesoundPlayer.Play();
         }
 
         private void playButton_Click(object sender, EventArgs e)
         {
+            gamesoundPlayer.Stop();
             playButton.Visible = false;
             exitButton.Visible = false;
             toptitleLabel.Visible = false;
