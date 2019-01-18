@@ -45,10 +45,16 @@ namespace whg
             InitializeComponent();
             InitializeGameValues();
         }
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            gamesoundPlayer.Position = TimeSpan.Zero;
+            gamesoundPlayer.Play();
+        }
 
         public void InitializeGameValues()
         {
             gamesoundPlayer = new System.Windows.Media.MediaPlayer();
+            gamesoundPlayer.MediaEnded += new EventHandler(Media_Ended);
             gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/gameback.mp3"));
             gamesoundPlayer.Play();
 
@@ -210,6 +216,8 @@ namespace whg
         /// </summary>
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            //gamesoundPlayer.
+
             int temptX = heroX;
             int temptY = heroY;
 
