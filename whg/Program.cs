@@ -16,7 +16,7 @@ namespace whg
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new a());
+            Application.Run(new MainForm());
         }
     }
 }
