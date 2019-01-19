@@ -1,6 +1,6 @@
 ﻿namespace whg
 {
-    partial class MenuScreen
+    partial class EasiestGameEver
     {
         /// <summary> 
         /// Required designer variable.
@@ -164,7 +164,7 @@
             this.loadingtextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.loadingtextLabel.Visible = false;
             // 
-            // MenuScreen
+            // EasiestGameEver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,7 @@
             this.Controls.Add(this.BlackBar1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
-            this.Name = "MenuScreen";
+            this.Name = "EasiestGameEver";
             this.Size = new System.Drawing.Size(712, 499);
             this.ResumeLayout(false);
             this.PerformLayout();

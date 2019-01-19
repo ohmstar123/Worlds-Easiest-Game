@@ -13,16 +13,23 @@ using System.IO;
 
 namespace whg
 {
-    public partial class MenuScreen : UserControl
+    public partial class EasiestGameEver : UserControl
     {
         System.Windows.Media.MediaPlayer gamesoundPlayer;
 
-        public MenuScreen()
+        public EasiestGameEver()
         {
             InitializeComponent();
 
             gamesoundPlayer = new System.Windows.Media.MediaPlayer();
+            gamesoundPlayer.MediaEnded += new EventHandler(Media_Ended);
             gamesoundPlayer.Open(new Uri(Application.StartupPath + "/Resources/menuback.mp3"));
+            gamesoundPlayer.Play();
+        }
+
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            gamesoundPlayer.Position = TimeSpan.Zero;
             gamesoundPlayer.Play();
         }
 

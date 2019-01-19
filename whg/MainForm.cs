@@ -22,7 +22,7 @@ namespace whg
             Cursor.Hide();
 
             // open the main menu for the game
-            MenuScreen ms = new MenuScreen();
+            EasiestGameEver ms = new EasiestGameEver();
             this.Controls.Add(ms);
 
             #region open in full screen or not
@@ -62,7 +62,7 @@ namespace whg
             switch (next)
             {
                 case "MenuScreen":
-                    ns = new MenuScreen();
+                    ns = new EasiestGameEver();
                     break;
                 case "GameScreen":
                     ns = new GameScreen();
