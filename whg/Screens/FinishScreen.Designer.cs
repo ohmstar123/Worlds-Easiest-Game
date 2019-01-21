@@ -115,7 +115,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BlackBar1);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ScoreScreen";
             this.Size = new System.Drawing.Size(712, 499);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.ScoreScreen_PreviewKeyDown);
