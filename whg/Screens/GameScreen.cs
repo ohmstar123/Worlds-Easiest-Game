@@ -251,10 +251,6 @@ namespace whg
                 {
                     monXList[i] = monXList[i] - monSpeedList[i];
                 }
-            }
-
-            for (int i = 0; i < monXList.Count; i++)
-            {
                 if (monXList[i] >= 435 & monLorRList[i] == 0)
                 {
                     monLorRList[i] = 1;
@@ -265,7 +261,9 @@ namespace whg
                     monLorRList[i] = 0;
                     monXList[i] = monXList[i] - monSpeedList[i];
                 }
+
             }
+
 
             //TODO collisions checks 
             Rectangle heroRec = new Rectangle(heroX, heroY, heroSize, heroSize);
@@ -304,7 +302,7 @@ namespace whg
 
             if (heroRec.IntersectsWith(FinishRec))
             {
-                herocheck = 1;
+                herocheck = 1;               
 
                 gamefinishBrush.Color = Color.Goldenrod;
                 gamestartBrush.Color = Color.LimeGreen;
