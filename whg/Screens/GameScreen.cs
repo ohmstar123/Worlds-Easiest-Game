@@ -20,7 +20,7 @@ namespace whg
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, bDown, nDown, mDown, spaceDown;
 
         //TODO create your global game variables here
-        int heroX, heroY, heroSize, heroSpeed;
+        int heroX, heroY, heroSize, heroSpeed, herocheck = 0;
         int deathcounter = 0;
         SolidBrush heroBrush = new SolidBrush(Color.Red);
         SolidBrush monBrush = new SolidBrush(Color.DodgerBlue);
@@ -98,43 +98,43 @@ namespace whg
             monXList.Add(435);//
             monYList.Add(345);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(1);
 
             monXList.Add(210);
             monYList.Add(305);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(0);
 
             monXList.Add(435);//
             monYList.Add(265);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(1);
 
             monXList.Add(210);
             monYList.Add(225);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(0);
 
             monXList.Add(435);//
             monYList.Add(185);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(1);
 
             monXList.Add(210);
             monYList.Add(145);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(0);
 
             monXList.Add(435);//
             monYList.Add(105);
             monSizeList.Add(25);
-            monSpeedList.Add(6);
+            monSpeedList.Add(7);
             monLorRList.Add(1);
         }
 
@@ -289,6 +289,10 @@ namespace whg
                 {
                     heroX = 90;
                     heroY = 240;
+                    herocheck = 0;
+
+                    gamefinishBrush.Color = Color.LimeGreen;
+                    gamestartBrush.Color = Color.Goldenrod;
 
                     deathcounter++;
                     failLabel.Text = "FAILS: " + deathcounter;
@@ -296,14 +300,22 @@ namespace whg
             }
 
             Rectangle FinishRec = new Rectangle(520, 100, 100, 280);
+            Rectangle startRec = new Rectangle(50, 100, 100, 280);
 
             if (heroRec.IntersectsWith(FinishRec))
+            {
+                herocheck = 1;
+
+                gamefinishBrush.Color = Color.Goldenrod;
+                gamestartBrush.Color = Color.LimeGreen;
+            }
+
+            if (heroRec.IntersectsWith(startRec) & herocheck == 1)
             {
                 gameTimer.Enabled = false;
                 gamesoundPlayer.Stop();
                 MainForm.ChangeScreen(this, "ScoreScreen");
             }
-
 
             //calls the GameScreen_Paint method to draw the screen.
             Refresh();
@@ -327,8 +339,6 @@ namespace whg
             {
                 e.Graphics.FillEllipse(monBrush, monXList[i], monYList[i], monSizeList[i], monSizeList[i]);
             }
-
         }
     }
-
 }
