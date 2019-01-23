@@ -251,12 +251,12 @@ namespace whg
                 {
                     monXList[i] = monXList[i] - monSpeedList[i];
                 }
-                if (monXList[i] >= 435 & monLorRList[i] == 0)
+                if (monXList[i] >= 428 & monLorRList[i] == 0)
                 {
                     monLorRList[i] = 1;
                     monXList[i] = monXList[i] + monSpeedList[i];
                 }
-                else if (monXList[i] <= 210 & monLorRList[i] == 1)
+                else if (monXList[i] <= 217 & monLorRList[i] == 1)
                 {
                     monLorRList[i] = 0;
                     monXList[i] = monXList[i] - monSpeedList[i];

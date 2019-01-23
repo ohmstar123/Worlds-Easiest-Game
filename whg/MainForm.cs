@@ -13,7 +13,7 @@ namespace whg
 {
     public partial class MainForm : Form
     {
-        bool fullScreen = false;  // true: program runs fullscreen || false: program runs in window
+        bool fullScreen = true;  // true: program runs fullscreen || false: program runs in window
 
         public MainForm()
         {
