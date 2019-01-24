@@ -64,7 +64,7 @@ namespace whg
             heroY = 240;
             heroSize = 24;
             heroSpeed = 3;
-          
+
             boundaryXList.Add(0);
             boundaryYList.Add(0);
             boundaryWList.Add(712);
@@ -302,7 +302,7 @@ namespace whg
 
             if (heroRec.IntersectsWith(FinishRec))
             {
-                herocheck = 1;               
+                herocheck = 1;
 
                 gamefinishBrush.Color = Color.Goldenrod;
                 gamestartBrush.Color = Color.LimeGreen;
@@ -332,7 +332,7 @@ namespace whg
 
             //draw rectangle to screen
             e.Graphics.FillRectangle(heroBrush, heroX, heroY, heroSize, heroSize);
-            
+
             for (int i = 0; i < monXList.Count; i++)
             {
                 e.Graphics.FillEllipse(monBrush, monXList[i], monYList[i], monSizeList[i], monSizeList[i]);

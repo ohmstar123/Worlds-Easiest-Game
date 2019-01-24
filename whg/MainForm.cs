@@ -8,7 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameSystemServices;
-
+/// <summary>
+/// Ohm Patel
+/// World's Easiest Game
+/// January 24, 2019
+/// </summary>
 namespace whg
 {
     public partial class MainForm : Form
