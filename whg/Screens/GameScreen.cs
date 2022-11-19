@@ -276,6 +276,7 @@ namespace whg
                 {
                     heroX = temptX;
                     heroY = temptY;
+    
                 }
             }
 

@@ -49,10 +49,9 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
-            this.exitButton.Location = new System.Drawing.Point(461, 310);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.exitButton.Location = new System.Drawing.Point(692, 477);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(120, 39);
+            this.exitButton.Size = new System.Drawing.Size(180, 60);
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "END GAME";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -67,10 +66,9 @@
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.playButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.Color.Red;
-            this.playButton.Location = new System.Drawing.Point(129, 310);
-            this.playButton.Margin = new System.Windows.Forms.Padding(2);
+            this.playButton.Location = new System.Drawing.Point(194, 477);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(120, 39);
+            this.playButton.Size = new System.Drawing.Size(180, 60);
             this.playButton.TabIndex = 1;
             this.playButton.Tag = "GameScreen";
             this.playButton.Text = "PLAY GAME";
@@ -82,17 +80,19 @@
             // 
             this.BlackBar1.BackColor = System.Drawing.Color.Black;
             this.BlackBar1.Location = new System.Drawing.Point(0, 0);
+            this.BlackBar1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BlackBar1.Name = "BlackBar1";
-            this.BlackBar1.Size = new System.Drawing.Size(714, 52);
+            this.BlackBar1.Size = new System.Drawing.Size(1071, 80);
             this.BlackBar1.TabIndex = 12;
             this.BlackBar1.Text = "label1";
             // 
             // BlackBar2
             // 
             this.BlackBar2.BackColor = System.Drawing.Color.Black;
-            this.BlackBar2.Location = new System.Drawing.Point(0, 447);
+            this.BlackBar2.Location = new System.Drawing.Point(0, 688);
+            this.BlackBar2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BlackBar2.Name = "BlackBar2";
-            this.BlackBar2.Size = new System.Drawing.Size(714, 52);
+            this.BlackBar2.Size = new System.Drawing.Size(1071, 80);
             this.BlackBar2.TabIndex = 13;
             this.BlackBar2.Text = "label1";
             // 
@@ -102,19 +102,20 @@
             this.MadebyLabel.BackColor = System.Drawing.Color.Black;
             this.MadebyLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MadebyLabel.ForeColor = System.Drawing.Color.White;
-            this.MadebyLabel.Location = new System.Drawing.Point(3, 11);
+            this.MadebyLabel.Location = new System.Drawing.Point(4, 17);
+            this.MadebyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MadebyLabel.Name = "MadebyLabel";
-            this.MadebyLabel.Size = new System.Drawing.Size(263, 30);
+            this.MadebyLabel.Size = new System.Drawing.Size(0, 44);
             this.MadebyLabel.TabIndex = 14;
-            this.MadebyLabel.Text = "Made by: Ohm Patel";
             // 
             // toptitleLabel
             // 
             this.toptitleLabel.AutoSize = true;
             this.toptitleLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toptitleLabel.Location = new System.Drawing.Point(152, 148);
+            this.toptitleLabel.Location = new System.Drawing.Point(228, 228);
+            this.toptitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.toptitleLabel.Name = "toptitleLabel";
-            this.toptitleLabel.Size = new System.Drawing.Size(158, 24);
+            this.toptitleLabel.Size = new System.Drawing.Size(240, 37);
             this.toptitleLabel.TabIndex = 15;
             this.toptitleLabel.Text = "THE WORLD\'S";
             // 
@@ -123,9 +124,10 @@
             this.middletitleLabel.AutoSize = true;
             this.middletitleLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.middletitleLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.middletitleLabel.Location = new System.Drawing.Point(203, 169);
+            this.middletitleLabel.Location = new System.Drawing.Point(304, 260);
+            this.middletitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.middletitleLabel.Name = "middletitleLabel";
-            this.middletitleLabel.Size = new System.Drawing.Size(315, 45);
+            this.middletitleLabel.Size = new System.Drawing.Size(474, 68);
             this.middletitleLabel.TabIndex = 16;
             this.middletitleLabel.Text = "EASIEST GAME";
             // 
@@ -133,9 +135,10 @@
             // 
             this.bottemtitleLabel.AutoSize = true;
             this.bottemtitleLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bottemtitleLabel.Location = new System.Drawing.Point(468, 214);
+            this.bottemtitleLabel.Location = new System.Drawing.Point(702, 329);
+            this.bottemtitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bottemtitleLabel.Name = "bottemtitleLabel";
-            this.bottemtitleLabel.Size = new System.Drawing.Size(42, 18);
+            this.bottemtitleLabel.Size = new System.Drawing.Size(61, 28);
             this.bottemtitleLabel.TabIndex = 17;
             this.bottemtitleLabel.Text = "v1.0";
             // 
@@ -145,9 +148,10 @@
             this.failLabel.BackColor = System.Drawing.Color.Black;
             this.failLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.failLabel.ForeColor = System.Drawing.Color.White;
-            this.failLabel.Location = new System.Drawing.Point(595, 11);
+            this.failLabel.Location = new System.Drawing.Point(892, 17);
+            this.failLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.failLabel.Name = "failLabel";
-            this.failLabel.Size = new System.Drawing.Size(119, 30);
+            this.failLabel.Size = new System.Drawing.Size(175, 44);
             this.failLabel.TabIndex = 18;
             this.failLabel.Text = "FAILS: 0";
             this.failLabel.Visible = false;
@@ -156,9 +160,10 @@
             // 
             this.loadingtextLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadingtextLabel.ForeColor = System.Drawing.Color.Black;
-            this.loadingtextLabel.Location = new System.Drawing.Point(156, 192);
+            this.loadingtextLabel.Location = new System.Drawing.Point(234, 295);
+            this.loadingtextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loadingtextLabel.Name = "loadingtextLabel";
-            this.loadingtextLabel.Size = new System.Drawing.Size(405, 135);
+            this.loadingtextLabel.Size = new System.Drawing.Size(608, 208);
             this.loadingtextLabel.TabIndex = 19;
             this.loadingtextLabel.Text = "THIS WILL BE THE EASIEST TASK OF YOUR LIFE";
             this.loadingtextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +171,7 @@
             // 
             // EasiestGameEver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.Controls.Add(this.loadingtextLabel);
@@ -179,8 +184,9 @@
             this.Controls.Add(this.BlackBar1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EasiestGameEver";
-            this.Size = new System.Drawing.Size(712, 499);
+            this.Size = new System.Drawing.Size(1068, 768);
             this.ResumeLayout(false);
             this.PerformLayout();
 
